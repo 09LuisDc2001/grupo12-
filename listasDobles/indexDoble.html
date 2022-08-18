@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobles</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- JS dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap 4 dependency -->
+    <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- bootbox code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+    <script src="https://github.com/makeusabrew/bootbox/releases/download/v5.5.2/bootbox.locales.min.js"></script>
+
+
+    <link rel="stylesheet" href="stylesDobles.css">
+    <script type="module">
+
+        import {insertar_al_inicio} from './indexDobles.js';
+        import {insertar_al_final} from './indexDobles.js';
+        import {insertar_antes_x} from './indexDobles.js';
+        import {insertar_despues_x} from './indexDobles.js';
+
+        import {eliminar_primer_nodo} from './indexDobles.js';
+        import {eliminar_ultimo_nodo} from './indexDobles.js';
+        import {eliminar_nodo_X} from './indexDobles.js';
+        import {eliminar_despues_NodoX} from './indexDobles.js';
+        import {eliminar_antes_NodoX} from './indexDobles.js';
+       
+        window.insertar_al_inicio=insertar_al_inicio;
+        window.insertar_al_final = insertar_al_final;
+        window.insertar_antes_x=insertar_antes_x;
+        window.insertar_despues_x=insertar_despues_x;
+
+        
+        window.eliminar_primer_nodo=eliminar_primer_nodo;
+        window.eliminar_ultimo_nodo=eliminar_ultimo_nodo;
+        window.eliminar_nodo_X=eliminar_nodo_X;
+        window.eliminar_antes_NodoX=eliminar_antes_NodoX;
+        window.eliminar_despues_NodoX=eliminar_despues_NodoX;
+
+       
+       
+    </script>
+
+</head>
+<body>
+    <h1>LISTAS DOBLEMENTE ENLAZADAS:</h1>
+    <canvas id="tutorial3" width="700" height="150"></canvas>
+    <div id="salida"></div>
+
+    <div id = "principal">
+        <div class = "metodos">
+            <h3>METODOS DE INSERTACION:</h3>
+            <button onclick="insertar_al_inicio()">insertar al inicio</button>
+            <button onclick="insertar_al_final()">insertar al final</button>
+            <button onclick="insertar_antes_x()">insertar antes de x</button>
+            <button onclick="insertar_despues_x()">insertar despues de x</button>
+            
+        </div>
+       
+        
+        <div class = "metodos">
+            <h3>METODO DE ELIMINACION:</h3>
+            <button onclick="eliminar_primer_nodo()">eliminar primer nodo</button>
+        <button onclick="eliminar_ultimo_nodo()">eliminar ultimo nodo</button>
+        <button onclick="eliminar_nodo_X()">eliminar nodo x</button>
+        <button onclick="eliminar_despues_NodoX()">eliminar despues de x</button>
+        <button onclick="eliminar_antes_NodoX()">eliminar antes de x</button>
+        </div>
+
+        <div id="blog">
+            <a href="../principla.html">INICIO</a>
+        </div>
+        
+    </div>
+  
+   
+    
+</body>
+</html>

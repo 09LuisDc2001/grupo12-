@@ -1,4 +1,3 @@
-
 *{
     padding:0px;
     margin:0px;
@@ -6,13 +5,8 @@
    
 }
 
-
-
-
-
-
 body{
-  background:url("../img/fondo03.jpg");
+  background-color:black;
   
    
 }
@@ -20,13 +14,14 @@ body{
 h1{
     width:850px;
     color:white;
-    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:45px;
     font-weight:normal;
     margin:27px auto;
     background-color:#0aafff;
     text-align:center;
     padding-bottom:10px;
+    border-radius: 20px;
 }
 canvas { 
     margin-left:390px;
@@ -69,21 +64,25 @@ canvas {
 
 
 
-button{
-    margin:10px 10px 10px 0px;
-    color:#0aafff;
+#principal div button{
+    border-color:#37bcf9;
+    margin:10px 10px auto;
+    color:#00dad0;
     background-color:black;
     padding:5px;
     transition:all 300ms;
+    border-radius:10px;
 }
     
 
 
-button:hover{
-    font-size:15px;
-    color:#1400ff;
-    transform: scaler(1.2, 1.2);
+#principal div button:hover{
+    font-size:17px;
+    color:#37bcf9;
+    
 }
+
+
 
 #blog{
     margin:0px auto;
@@ -144,6 +143,5 @@ button:hover{
     color:white;
 
 }
-
 
 

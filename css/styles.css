@@ -1,0 +1,472 @@
+
+/*fuentes*/
+
+@font-face{
+    font-family:"trebuchetMS";
+    src:url(fonts/trebuchetMS.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:"BebasNeue";
+    src:url(fonts/bebasNeue.otf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+@font-face{
+    font-family:"WebSymbolsRegular";
+    src:url(fonts/websymbols-regular-webfont.eot.eot);
+    src:url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'),
+        url(fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style:normal;
+
+}
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+
+body{
+    background:url("../img/fondo03.jpg");
+}
+
+
+.wrap{
+    width:1250px;
+    margin:0px auto;
+}
+
+.clearfix{
+    float:none;
+    clear:both;
+}
+
+.gear, .icon{
+
+    font-family:"WebSymbolsRegular";
+
+}
+
+
+/*cabeceera*/
+
+
+#header{
+    width:100%;
+    height:70px;
+    background-color: black;
+    font-family:"BebasNeue";
+    color:white;
+}
+
+#logo{
+    float:left;
+    width:240px;
+    background-color:#37bcf9;
+    text-align:center;
+    margin-top:8px;
+    margin-left:20px;
+    letter-spacing:1px;
+    cursor:pointer;
+    overflow:hidden;
+    transition:all 300ms;
+
+
+}
+
+#logo:hover{
+    border-radius:2px ;
+    color:black;
+    background-color:rgb(230, 5, 230);
+}
+#logo .gear{
+    display:block;
+    float:left;
+    font-size:30px;
+    margin-top:8px;
+    margin-left:26px;
+    animation-name:rotate-gear;
+    animation-duration:2s;
+    /*la animacion sera infinita*/
+    animation-iteration-count: infinite;
+    /*la velocidad siempre sera la misma*/
+    animation-timing-function: linear;
+     
+}
+
+@keyframes rotate-gear {
+    from{
+        transform:rotatez(0deg);
+    }
+
+    to{
+        transform:rotatez(360deg);
+    }
+}
+
+
+#logo:hover .gear{
+    animation:fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0%{
+        transform:translateY(0%);
+    }
+
+    50%{
+        transform:translateY(200%);
+    }
+
+    100%{
+        transform:translateY(0%);
+    }
+}
+
+
+#logo h3{
+    display:block;
+    float:right;
+    font-size:30px;
+    margin-top:5px;
+    margin-right:65px; 
+    transition:all 300ms;
+    
+}
+
+
+#logo:hover h3{
+    animation:fromRight 300ms linear;
+}
+
+@keyframes  fromRight {
+    from{
+        transform:translateX(200%);
+    }
+
+    to{
+        transform:translateX(0%);
+    }
+}
+
+
+
+
+
+/*tarjetas*/
+
+.card{
+    float:left;
+    width:206px;
+    height:305px;
+   
+    border:1px solid #ccc;
+    box-shadow:1px 1px 2px #ddd;
+   
+    cursor:pointer;
+    overflow:hidden;
+    margin:22px;
+    margin-top:40px;
+    transition:all 300ms;
+
+}
+
+
+.card:hover{
+    background:black;
+
+}
+.card:last-child{
+    margin-right:0px;
+}
+
+/*EFECTO A LOS ICONOS DE LAS TARJETAS*/
+
+.card .unjbg{
+    
+    height:170px;
+   margin-left:20px;
+}
+
+
+/*cuando el cursor pase por ahi*/
+.card:hover .unjbg{
+    
+    animation:showIcon 300ms linear;
+}
+
+.card .icon{
+    display:block;
+    width:100%;
+    height:170px;
+    font-size:90px;
+    line-height:160px;/*espacio con la parte de arriba*/
+    text-align:center;/*centra el contenido*/
+    margin:0px auto;
+    transition:all 300ms;
+    color:#37bcf9;
+}
+
+/*cuando el cursor pase por ahi*/
+.card:hover .icon{
+    font-size:100px;
+    color:#1400ff;
+    animation:showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from{
+        transform:translateY(-200%);
+    }
+    
+    to{
+        transform:translateY(0%);
+    }
+}
+
+
+/*EFECTOS A LAS TITULOS DE LAS TARJETAS*/
+.card .category{
+    width:100%;
+    height:50px;
+    font-family:"TrebuchetMS";
+    font-family:21px;
+    font-weight:bold;
+    text-align:center;
+    color:#37bcf9;
+    transition:all 300ms;
+}
+
+.card:hover .category{
+    color:#1400ff;
+    animation:showCategory 400ms linear;
+}
+@keyframes showCategory {
+    from{
+        transform:translatey(-300%);
+        color:black;
+    }
+
+    to{
+        transform:translateY(0%);
+        color:#1400ff;
+    }
+
+}
+
+/*efecto del texto de las tarjetas */
+.card .description{
+    font-family:"TrebuchetMS";
+    text-align:center;
+    color:#056baf;
+    
+    font-size:15px;
+    transition:all 300ms;
+}
+
+.card:hover .description{
+    
+    color:#1400ff;
+    animation:showDescription 400ms linear;
+}
+
+
+
+@keyframes showDescription {
+    from{
+        transform:translateX(-300%);
+        color:black;
+    }
+
+    to{
+        transform:translatex(0%);
+        color:#1400ff;
+    }
+}
+
+/*lateral barra*/
+
+#lateral{
+    width:300px;
+    min-height:1200px;
+    font-family:"TrebuchetMS";
+    float:right;
+    margin:20px;
+
+}
+
+aside h3{
+    display:block;
+    width:auto;
+    height:45px;
+    line-height:49px;
+    background-color:black;
+    box-shadow:0px 1px 0px #37bcf9, 1px 2px 0px #37bcf9, 2px 3px 0px #37bcf9, 3px 4px 0px #37bcf9;
+    font-size:30px;
+    font-familY:"BebasNeue";
+    font-weight:normal;
+    letter-spacing:2px;
+    padding-left:15px;
+    margin-top:30px;
+    margin-bottom:15px;
+    
+    color:#37bcf9;
+
+}
+
+aside h3:first-child{
+    margin-top:0px;
+}
+
+
+
+
+
+
+#social{
+    height:190px;
+}
+#social a{
+    display:block;
+    color:#37bcf9;
+    text-decoration:none;
+    font-size:30px;
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+/*el estilo de las redes sociales de twitter de facebook*/
+#social .overlay{
+    display:block;
+    height:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing:1px;
+    text-shadow:0px 0px 1px #ccc;
+    border:1px solid white;
+    box-shadow:0px 0px 4px #ccc;
+    background: black;
+    position:absolute;
+    padding:5px;
+    margin-left:70px;
+    margin-top:-52px;
+    cursor:pointer;
+    transform:translateX(-50%);
+    /*hace que el texto desaparezca*/
+    opacity:0;
+    transition:all 300ms;
+
+
+}
+
+
+/*cambia el diseño de tiwtter facebook cuando el cursor pasa por ahi*/ 
+#social div:hover .overlay{
+    opacity:1;
+    transform:translateX(0%);
+    background-color:black;
+    color:#37bcf9;
+
+}   
+
+/*articulos*/
+
+#articles{
+    width:860px;
+    float:left;
+}
+
+#articles h2{
+    display:block;
+    width:100%;
+    height:75px;
+    line-height:75px;
+    text-align:center;
+    font-family:"BebasNeue";
+    font-size:40px;
+    font-weight: normal;
+    letter-spacing:2px;
+    background-color:black;
+    color:#37bcf9;
+
+    box-shadow:0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px ;
+    margin:0px auto;
+    margin-top:20px;
+    margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+#blog{
+    height:100px;
+    margin-top:60px;
+    line-height:100px;
+    text-align:center;
+    transition:all 1s;
+
+}
+
+
+#blog a{
+    display:block;
+    font-family:"BebasNeue"; 
+    font-size:40px;
+    letter-spacing: 3px;
+    color:#00538c;
+    text-decoration:none;
+    transition:all 1s;
+}
+
+#blog:hover{
+    background-color:#333;
+    border:10px solid #37bcf9;
+    border-radius:240px;
+    box-shadow:0px 0px 10px gray;
+    animation:blink 10s infinite linear;
+
+
+}
+@keyframes blink {
+    0%{
+        border:10px solid #37bcf9;
+        
+    }
+    25%{
+        border:10px solid green;
+
+    }
+    50%{
+        border:10px solid yellow;
+
+    }
+    75%{
+        border:10px solid white;
+
+    }
+    100%{
+        border:10px solid #37bcf9;
+
+    }
+}
+
+#blog:hover a{
+    text-shadow:1px 1px  1px black ,1px 2px 1px black , 1px 3px 1px black , 1px 4px 1px black, 1px 5px 1px black , 1px 6px 1px black ;
+    color:white;
+
+
+
+}
